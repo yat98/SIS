@@ -1,0 +1,168 @@
+.gambar-logo{
+    width: 55px;
+    height: 65px;
+}
+.gambar-logo-section{
+    width: 150px;
+    height: 180px;
+}
+
+.img-flex{
+    height: 90vh;
+    background-size: cover;
+}
+
+.judul-h2{
+    display: inline-block;
+    padding-bottom: 20px;
+    border-bottom: 5px solid rgb(59, 149, 185);
+    color:#0D2127;
+    margin-bottom: 40px;
+}
+
+.judul-h2-tengah{
+    padding-bottom: 20px;
+    border-bottom: 5px solid rgb(59, 149, 185);
+    color:#0D2127;
+    margin-bottom: 40px;
+    width: 310px;
+}
+
+.bg-swirl{
+    background-image: url('../img/bg/swirl_pattern.png');
+    background-attachment: fixed;
+}
+
+.bg-navy{
+    background: linear-gradient(to left,rgb(23, 95, 116),rgb(88, 141, 101));
+}
+
+.bg-section-1{
+    background: linear-gradient(#C0DE88,rgb(224, 245, 185),#ffffff);
+}
+
+.nav-kiri{
+    margin-left: 230px;
+}
+
+.bg-carousel{
+    background: linear-gradient(to bottom,rgba(23, 95, 116,0.9),rgba(88, 141, 101,0.8));
+    border-radius: 35px;
+    box-shadow: 1px 1px 10px 2px black;
+}
+.ml-6{
+    margin-left: 80px
+}
+.hr-custom{
+    background-color: rgb(143, 143, 143);
+    color: rgb(143, 143, 143);
+    margin: 50px 0;
+    height: 0.2px;
+}
+
+.bg-kompetensi{
+    background: linear-gradient(to top,white,rgb(237, 241, 241),rgb(239, 243, 243),rgb(239, 243, 243),rgb(224, 245, 185),rgb(240, 240, 240),rgb(248, 248, 248),rgb(224, 245, 185),white);
+}
+
+.bg-footer{
+    background: linear-gradient(to top,rgb(23, 95, 116),rgb(75, 117, 86),rgb(88, 141, 101));
+}
+
+.img-footer{
+    height: 150px;
+    width: 120px;
+}
+
+.judul-h6{
+    display: inline-block;
+    border-bottom: 3px solid white;
+}
+
+.bg-footer-2{
+    background-color:rgb(18, 68, 85);
+}
+
+.footer-icon-size{
+    font-size: 18px;
+}
+.icon-hov:hover{
+    color: lightblue;
+}
+
+.tengah-icon{
+    text-align: right;
+}
+
+.hilang-bawah{
+    opacity: 0;
+    transform: translate(0,100px);
+    transition: 2s;
+}
+
+.hilang-atas{
+    opacity: 0;
+    transform: translate(0,-100px);
+    transition: 2s;
+}
+
+.hilang-kanan,.hilang-kiri{
+    transform: translate(100px,0);
+    opacity: 0;
+    transition: 2s;
+}
+
+.hilang-kiri{
+    transform: translate(-100px,0);
+}
+
+.muncul-atas,.muncul-bawah,.muncul-kanan,.muncul-kiri{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+#kompetensi,#sejarah,#footer{
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {      
+    background: lightgray;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: linear-gradient(to left,rgb(23, 95, 116),rgb(88, 141, 101));
+}
+
+@media only screen and (max-width: 900px){
+    .img-flex,.responsive-img{
+        height:123vh;
+    }
+    .responsive-kiri{
+        width: 80vw;
+    }
+    .nav-kiri{
+        margin-left: 0px;
+    }
+    .ml-6{
+        margin-left: 0;
+        padding-right:5px;
+    }
+    .tengah{
+        text-align: center;
+    }
+    .judul-h2{
+        /* display: block; */
+        /* max-width: 255px; */
+        margin: 0 auto;
+    }
+    .footer-icon-size{
+        text-align: center;
+    }
+    .tengah-icon{
+        text-align: center;
+    }
+}
