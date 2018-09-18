@@ -1,5 +1,11 @@
 $(document).ready(function(){
+    // LOADING
+    $(".loader").fadeOut('slow');
 
+    // LAZY LOAD CAROUSEL
+    $('.responsive-img.lazy').show().lazyload({threshold : 600});
+
+    // CAROUSEL ANIMATE
     $(window).on('load',function(){
         $('.navbar').addClass('animated');
         $('.navbar').addClass('slideIn');
@@ -9,21 +15,26 @@ $(document).ready(function(){
         $('.carousel-utama').addClass('fadeInUp');
         $('.carousel-utama').addClass('muncul-bawah');
 
-        setInterval(function(){
+        setTimeout(function(){
             $('.bounce').addClass('animated');
             $('.bounce').addClass('bounceInUp');
             $('.bounce').addClass('muncul-bawah');
         },800);
     });
 
+    // EVENT SCROLL
     $(window).scroll(function(){
+
+        // JARAK BROWSER KE ELEMEN
         let jarakScroll = $(this).scrollTop();
 
+        // PARALLAX CAPTION
         $('.carousel-caption').css({
             'transform':'translate(0,-'+jarakScroll/3+'px)'
         });
 
-        if(jarakScroll > $('#sejarah').offset().top - 400){
+        // SEJARAH ANIMATE
+        if(jarakScroll > $('#sejarah').offset().top -700){
             $('#sejarah').addClass('animated');
             $('#sejarah').addClass('slideInUp');
             $('#sejarah').addClass('muncul-atas');
@@ -33,13 +44,14 @@ $(document).ready(function(){
             setInterval(function(){
                 $('.judul-sejarah').addClass('muncul-kiri');
             },300);
-            setInterval(function(){
+            setTimeout(function(){
                 $('.logo').addClass('animated');
                 $('.logo').addClass('slideInRight');
                 $('.logo').addClass('muncul-kanan');
             },600);
         }
 
+        // KOMPETENSI ANIMATE
         if(jarakScroll > $('#kompetensi').offset().top-120){
             $('.judul-kompetensi').addClass('muncul-atas');
         }
@@ -60,6 +72,7 @@ $(document).ready(function(){
             $('.kompetensi-4').addClass('muncul-kiri');
         }
 
+        // KEGIATAN ANIMATE
         if(jarakScroll > $('#kegiatan').offset().top-180){
             $('.judul-kegiatan').addClass('muncul-atas');
         }
@@ -85,4 +98,12 @@ $(document).ready(function(){
         }
     });
 
+    // LAZY LOAD
+    $('.lazy').show().lazyload({effect:'fadeIn'});
+    $('.carousel-control-next').on('click',function(){
+        $('.lazy').show().lazyload({threshold : 600});
+    });
+    $('.carousel-control-prev').on('click',function(){
+        $('.lazy').show().lazyload({threshold : 600});
+    });
 });

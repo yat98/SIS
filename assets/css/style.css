@@ -2,6 +2,7 @@
     width: 55px;
     height: 65px;
 }
+
 .gambar-logo-section{
     width: 150px;
     height: 180px;
@@ -9,7 +10,11 @@
 
 .img-flex{
     height: 90vh;
+    width: 100vw;
     background-size: cover;
+}
+.responsive-img{
+    width: 100vw;
 }
 
 .judul-h2{
@@ -50,9 +55,11 @@
     border-radius: 35px;
     box-shadow: 1px 1px 10px 2px black;
 }
+
 .ml-6{
     margin-left: 80px
 }
+
 .hr-custom{
     background-color: rgb(143, 143, 143);
     color: rgb(143, 143, 143);
@@ -85,6 +92,11 @@
 .footer-icon-size{
     font-size: 18px;
 }
+
+.icon-hov{
+    font-size: 25px;
+}
+
 .icon-hov:hover{
     color: lightblue;
 }
@@ -137,9 +149,66 @@
     background: linear-gradient(to left,rgb(23, 95, 116),rgb(88, 141, 101));
 }
 
+.loader {
+    text-align: center;    
+}
+
+.loader span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    margin: 45vh auto;
+    background: linear-gradient(to left,rgb(23, 95, 116),rgb(88, 141, 101));
+    border-radius: 50%;
+    -webkit-animation: loader 0.9s infinite alternate;
+    -moz-animation: loader 0.9s infinite alternate;
+}
+.loader span:nth-of-type(2) {
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+}
+.loader span:nth-of-type(3) {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+}
+
+.carousel-section{
+    overflow: hidden;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 0.9;
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    width: 24px;
+    height: 24px;
+    opacity: 0.1;
+    -webkit-transform: translateY(-21px);
+  }
+}
+@-moz-keyframes loader {
+  0% {
+    width: 10px;
+    height: 10px;
+    opacity: 0.9;
+    -moz-transform: translateY(0);
+  }
+  100% {
+    width: 24px;
+    height: 24px;
+    opacity: 0.1;
+    -moz-transform: translateY(-21px);
+  }
+}
+
 @media only screen and (max-width: 900px){
     .img-flex,.responsive-img{
-        height:123vh;
+        height:160vh;
     }
     .responsive-kiri{
         width: 80vw;
@@ -155,8 +224,6 @@
         text-align: center;
     }
     .judul-h2{
-        /* display: block; */
-        /* max-width: 255px; */
         margin: 0 auto;
     }
     .footer-icon-size{
